@@ -1,0 +1,94 @@
+<html> 
+
+<script>
+
+function add(){
+
+    let no1, no2,no3;
+    
+    if(document.getElementById("first").value==""){
+        alert("First number is mising!!");
+        document.getElementById("first").focus();
+    }else{
+        no1=document.getElementById("first").value;
+        if(document.getElementById("second").value==""){
+            alert("Second number is missing!!");
+            document.getElementById("second").focus();
+        }else{
+            no2=document.getElementById("second").value;
+            no3= parseInt(no1) + parseInt(no2);
+            document.getElementById("result").value=no3;
+        }
+    }
+}
+
+function Subtract(){
+
+let no1, no2,no3;
+
+if(document.getElementById("first").value==""){
+        alert("First number is mising!!");
+        document.getElementById("first").focus();
+    }else{
+        no1=document.getElementById("first").value;
+        if(document.getElementById("second").value==""){
+            alert("Second number is missing!!");
+            document.getElementById("second").focus();
+        }else{
+            no2=document.getElementById("second").value;
+            no3= parseInt(no1) - parseInt(no2);
+            document.getElementById("result").value=no3;
+        }
+    }
+
+}
+
+function Multiply(){
+
+let no1, no2,no3;
+
+if(document.getElementById("first").value==""){
+        alert("First number is mising!!");
+        document.getElementById("first").focus();
+    }else{
+        no1=document.getElementById("first").value;
+        if(document.getElementById("second").value==""){
+            alert("Second number is missing!!");
+            document.getElementById("second").focus();
+        }else{
+            no2=document.getElementById("second").value;
+            no3= parseInt(no1) * parseInt(no2);
+            document.getElementById("result").value=no3;
+        }
+    }
+}
+
+function Divide(){
+
+let no1, no2,no3;
+
+if(document.getElementById("first").value==""){
+        alert("First number is mising!!");
+        document.getElementById("first").focus();
+    }else{
+        no1=document.getElementById("first").value;
+        if(document.getElementById("second").value==""){
+            alert("Second number is missing!!");
+            document.getElementById("second").focus();
+        }else{
+            no2=document.getElementById("second").value;
+            no3= parseInt(no1) / parseInt(no2);
+            document.getElementById("result").value=no3;
+        }
+    }
+}
+</script>    
+
+Enter first number: <input type="text" id="first"> <br>
+Enter second number: <input type="text" id="second"> <br><br>
+<input type="button" value="Add" onclick="add()">
+<input type="button" value="Subtract" onclick="Subtract()">
+<input type="button" value="Multiply" onclick="Multiply()">
+<input type="button" value="Divide" onclick="Divide()"><br><br>
+The result is: <input type="text" id="result">
+</html>

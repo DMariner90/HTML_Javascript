@@ -1,0 +1,33 @@
+<html>
+
+<body onmousemove="movement()" ;>
+    <input type="button" onclick="changeColor()">
+    <b id="Z" style="position:absolute; top:10; left:0"> Vroom..!! </b>
+
+
+</body>
+
+<script>
+
+    let Fsize = 10;
+    let ref = document.getElementById("Z");
+
+    function movement() {
+        ref.style.top = event.clientY + 10;
+        ref.style.left = event.clientX;
+        ref.style.fontSize = event.clientY;
+    }
+
+    function changeColor() {
+        ref.style.color = "green";
+    }
+
+    function changeFontSize() {
+
+
+        ref.style.fontSize = event.clientY;
+    }
+
+</script>
+
+</html>

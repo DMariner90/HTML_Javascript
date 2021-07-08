@@ -1,0 +1,54 @@
+<html>
+
+<body onkeydown="what()">
+
+    <span style="position:absolute; top:600;left:0;" id="sp">
+        <img src="platform2.jpg" width="50%"> </img>
+    </span>
+
+    <span style="position:absolute; top:600;left:0;" id="sp1">
+        <img src="moon.jpg" width="40%"> </img>
+    </span>
+
+</body>
+
+<script>
+    let ref=document.getElementById("sp");
+
+        function what(){
+            //right arrow key 
+            if(event.keyCode==39){
+                ref.style.left=parseInt(ref.style.left)+10;
+            }
+            //left arrow key 
+            if(event.keyCode==37){
+                ref.style.left=parseInt(ref.style.left)-10;
+            }
+
+            if(event.keyCode==32){
+                let timer1;
+                let timer2;
+                let newElement=document.createElement("span");
+                newElement.innerHTML="<img src ='trump.jpg' width='20%'> </img>"
+                newElement.style="position:absolute; top:560";
+                newElement.style.left=ref.style.left;
+                document.body.appendChild(newElement);
+            
+                let t=parseInt(Math.random()*300);
+                let l=parseInt(Math.random()*1000);
+                document.getElementById("sp1").style.top=t;
+                document.getElementById("sp1").style.left=l;
+                timer2= setInterval(100)
+            
+                timer1=setInterval(function(){
+                    newElement.style.top=parseInt(newElement.style.top)-30;
+                    if(parseInt(newElement.style.top)<10){
+                        clearInterval(timer1);
+                    }
+                },100);
+            }
+        }
+
+</script>
+
+</html>

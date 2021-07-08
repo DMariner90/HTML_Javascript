@@ -1,0 +1,48 @@
+<html>
+
+<form action="myserver.html" onsubmit="return check()">
+
+    Enter UserName:<input type="text" id="username"> 
+        <span style="color:red;visibility:hidden" id="ErrorUserName"> UserName is Missing!!!!!</span><br>
+    Enter Password:<input type="password" id="pass"> 
+        <span style="color:red;visibility:hidden" id="ErrorPassword"> Password is Missing!!!!!</span><br>
+    <input type="submit">
+
+    <form>
+
+        <script>
+
+            function check(){
+                let result=true;
+                if(document.getElementById("username").value==""){
+                    document.getElementById("ErrorUserName").style.visibility="visible";
+                result=false;
+                }
+                else{
+                    document.getElementById("username").value.visibility="hidden";
+                }
+                for(let index = 0; index< document.getElementById("username").value.length; length++){
+                        if(username.value.substring(index, (index +1))==" "){
+                            alert("A space was detected in the username");
+                            result= false;
+                        }
+                        if(username.value.substring(index, (index +1))=="*"){
+                            alert("A * was detected in the username");
+                            result= false;
+                        }
+                    }
+
+                if(document.getElementById("pass").value==""){
+                    document.getElementById("ErrorPassword").style.visibility="visible";
+                result=false;
+                }
+                else{
+                    document.getElementById("pass").value.visibility="hidden";
+                }
+                return result;
+            }
+
+        </script>
+    </form>
+
+</html>

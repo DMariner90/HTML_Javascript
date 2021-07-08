@@ -1,0 +1,49 @@
+<html>
+
+<span id="Main1" style="position:absolute; top:100px;left:20px" onmouseenter="displaymenu1()">
+<h3> SPORTS </h3>
+</span>
+
+<span id="Main2" style="position:absolute; top: 100px;left:250px" onmouseenter="displaymenu2()"> 
+<h3> COUNTRIES </h3>
+</span>
+
+<span id="sportsmenu" style="visibility:hidden">
+    <span id="Football" style="position:absolute;top:140px;left:30px" onmouseenter="mousein('Football')" onmouseleave="mouseout('Football')" onclick="displayData('Football is my favourite game')">Football</span>
+    <span id="Cricket" style="position:absolute;top:160px;left:30px" onmouseenter="mousein('Cricket')" onmouseleave="mouseout('Cricket')" onclick="displayData('Cricket is my favourite game')">Cricket</span>
+    <span id="Hockey" style="position:absolute;top:180px;left:30px" onmouseenter="mousein('Hockey')" onmouseleave="mouseout('Hockey')"onclick="displayData('Hockey is my favourite game')">Hockey</span>
+</span>
+
+<span id="countrymenu" style="visibility:hidden">
+    <span id="England" style="position:absolute;top: 140;left:250px" onmouseenter="mousein('England')" onmouseleave="mouseout('England')" onclick="displayData('England is my favourite country')">England</span>
+    <span id="Scotland" style="position:absolute;top:160;left:250px" onmouseenter="mousein('Scotland')" onmouseleave="mouseout('Scotland')" onclick="displayData('Scotland is my favourite country')">Scotland </span>
+    <span id="Wales" style="position:absolute;top:180;left:250px" onmouseenter="mousein('Wales')" onmouseleave="mouseout('Wales')"onclick="displayData('Wales is my favourite country')">Wales </span>
+    <span id="Ireland" style="position:absolute;top:200;left:250px;" onmouseenter="mousein('Ireland')" onmouseleave="mouseout('Ireland')"onclick="displayData('Ireland is my favourite country')">Ireland</span>
+</span>
+
+<span id="displayData" style="position:absolute;top:300;left:20" onmouseclick="displayData()"></span>
+
+<script>
+
+function mousein(myID){
+    document.getElementById(myID).style.backgroundColor="lightblue";
+}
+function mouseout(myID){
+    document.getElementById(myID).style.backgroundColor="white";
+}
+function displaymenu1(){
+    document.getElementById("sportsmenu").style.visibility="visible";
+    document.getElementById("countrymenu").style.visibility="hidden";
+}
+function displaymenu2(){
+    document.getElementById("countrymenu").style.visibility="visible";
+    document.getElementById("sportsmenu").style.visibility="hidden";
+}
+function displayData(data){
+
+    document.getElementById("displayData").innerHTML=data;
+}
+
+</script>
+
+</html>

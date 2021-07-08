@@ -1,0 +1,35 @@
+<html>
+
+<body onmousemove="movement()" ;></body>
+
+<input type="text" id="textbox" value="Type here......" onmouseleave="changeWord()">
+
+<span id="Z" style="position:absolute; top:100; left:300"> nationwide </span>
+
+
+<script>
+
+    let Fsize = 10;
+    let ref = document.getElementById("Z");
+
+    function movement() {
+
+        document.getElementById("Z").innerHTML=document.getElementById("textbox").value;
+        
+        if(event.ctrlKey){
+            fontSize++
+        }
+        if(event.altKey){
+            fontSize--
+        }
+        
+        document.getElementById("Z").style.top = event.clientY+20;
+        document.getElementById("Z").style.left = event.clientX;
+  
+    }
+
+    function changeWord() {
+    }
+</script>
+
+</html>

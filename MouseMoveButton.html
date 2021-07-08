@@ -1,0 +1,27 @@
+<html>
+<input type="text" id="i" value="0">
+<br>
+<input type="button" value="+++++++++++++++++++++"
+    onmousemove="mouseMove1()"
+    onmouseenter="mouseEnter1()"
+    onmouseleave="mouseLeave1()"
+    
+>
+
+<script>
+    let ref=document.getElementById("i");
+
+    function mouseMove1(){
+        ref.value=parseInt(ref.value)+1;
+    }
+
+    function mouseEnter1(){
+        ref.value="2";
+    }
+
+    function mouseLeave1(){
+        ref.value="10";
+    }
+</script>
+
+</html>
